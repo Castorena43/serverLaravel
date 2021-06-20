@@ -10,7 +10,23 @@ class PersonaController extends Controller
 {
     //
     public function all(){
-        $people = Persona::all();
+        // $people = Persona::all();
+        $people = [
+            [
+                "id"=> 10001,
+                "name"=> "Jose",
+                "email"=> "jose@gmail.com",
+                "created_at"=> "2021-05-13T22:36:49.000000Z",
+                "updated_at"=> "2021-05-13T22:36:49.000000Z"
+            ],
+            [
+                "id"=> 10002,
+                "name"=> "Hector",
+                "email"=> "cosa@gmail.com",
+                "created_at"=> "2021-05-13T17:37:16.000000Z",
+                "updated_at"=> "2021-05-13T17:37:16.000000Z"
+            ]
+        ];
         return response()->json($people, 200);
     }
 
