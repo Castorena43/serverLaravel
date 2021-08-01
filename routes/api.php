@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\API\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('people',[PersonaController::class, 'all']);
 Route::post('create-people',[PersonaController::class, 'create']);
+
+Route::post('create-user',[AuthController::class, 'registro']);
